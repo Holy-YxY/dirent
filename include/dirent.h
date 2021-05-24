@@ -956,7 +956,7 @@ static int strverscmp(const char *a, const char *b)
 }
 
 /* Convert multi-byte string to wide character string */
-#if !defined(_MSC_VER) || _MSC_VER < 1400
+//#if !defined(_MSC_VER) || _MSC_VER < 1400
 static int dirent_mbstowcs_s(
 	size_t *pReturnValue, wchar_t *wcstr,
 	size_t sizeInWords, const char *mbstr, size_t count)
@@ -981,10 +981,10 @@ static int dirent_mbstowcs_s(
 	/* Success */
 	return 0;
 }
-#endif
+//#endif
 
 /* Convert wide-character string to multi-byte string */
-#if !defined(_MSC_VER) || _MSC_VER < 1400
+//#if !defined(_MSC_VER) || _MSC_VER < 1400
 static int dirent_wcstombs_s(
 	size_t *pReturnValue, char *mbstr,
 	size_t sizeInBytes, const wchar_t *wcstr, size_t count)
@@ -1010,7 +1010,7 @@ static int dirent_wcstombs_s(
 	/* Success */
 	return 0;
 }
-#endif
+//#endif
 
 /* Set errno variable */
 #if !defined(_MSC_VER) || _MSC_VER < 1400
